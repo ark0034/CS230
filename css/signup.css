@@ -14,7 +14,7 @@
 .center-me {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .signup-form {
@@ -22,6 +22,7 @@
     background-color: #d5d5d5;
     padding: 20px;
     text-align: center;
+    margin: 10px 10px 10px 10px;
 }
 
 input {
