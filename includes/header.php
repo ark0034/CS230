@@ -38,7 +38,7 @@ session_start();
                         <a class="nav-link" href="profile.php">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">About Us</a>
+                        <a class="nav-link" href="about.php">About Us</a>
                     </li>';
                     if ($_SESSION['admin']==1) {
                         echo '<li class="nav-item">
