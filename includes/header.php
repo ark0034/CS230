@@ -18,8 +18,8 @@ session_start();
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
-            <a class="navbar-brand" href="#">Priti Creations</a>
+        <div class="d-md-flex d-block flex-row">
+            <a class="navbar-brand" href="../login.php">Priti Creations</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@ session_start();
                 <ul class="navbar-nav mr-auto">
                     <?php if (isset($_SESSION['uid'])) {
                         echo '<li class="nav-item">
-                        <a class="nav-link" href="includes/logout.php">Logout</a>
+                        <a class="nav-link" href="includes/logout.php" style="text-align: left;">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.php">Gallery</a>
@@ -37,6 +37,11 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="profile.php">Profile</a>
                     </li>';
+                    if ($_SESSION['admin']==1) {
+                        echo '<li class="nav-item">
+                        <a class="nav-link" href="admin.php" style="text-align: left;">Post a Creation</a>
+                    </li>';
+                    }
                     }
                     else {
                         echo '<li class="nav-item">
@@ -48,7 +53,7 @@ session_start();
                     }
                     ?>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../about.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../home.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>

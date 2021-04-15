@@ -29,7 +29,7 @@ require 'includes/dbhandler.php';
 
             <form action="includes/gallery-helper.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <img src="images/default.jpeg" alt="gallery pic" onclick="triggered();" id="gallery-display">
+                    <img src="images/default.jpeg" alt="gallery pic" onclick="triggered();" id="gallery-display" style="margin-bottom: 15px;">
 
                     <input type="text" name="title" class="form-control" placeholder="title..">
                     <input type="file" name="gallery-image" id="gallery-image" onchange="preview(this)" class="form-control"

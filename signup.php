@@ -17,7 +17,7 @@ require "includes/header.php"
 
                         <div class="form-group">
                             <div class="row">
-                                <div class="column">
+                                <div class="column" style="margin-right: 10px;">
                                     <input type="text" class="form-control" name="fname" placeholder="First Name" required autofocus>
                                 </div>
                                 <div class="column">

@@ -32,10 +32,11 @@ if(isset($_POST['login-submit'])){
             if($pass_check == true){
                 session_start();
                 $_SESSION['uid'] = $data['uid'];
+                $_SESSION['admin'] = $data['admin'];
                 $_SESSION['fname'] = $data['fname'];
                 $_SESSION['uname'] = $data['uname'];
 
-                header("Location: ../index.php?success=login");
+                header("Location: ../home.php?success=login");
                 exit();
             }else{
                 header("Location: ../login.php?error=WrongPass");

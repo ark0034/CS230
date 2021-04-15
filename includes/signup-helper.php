@@ -48,8 +48,19 @@ if(isset($_POST['signup-submit'])){
 
                     $sqlImg = "INSERT INTO profiles (uname, fname) VALUES ('$username', '$fname')";
                     mysqli_query($conn, $sqlImg);
+                    
+                    $sqlUid = "SELECT * FROM users WHERE uname='$username'";
+                    $query = mysqli_query($conn, $sqlUid);
+                    $row = mysqli_fetch_array($query);
+                    $uid = $row['uid'];
 
-                    header("Location: ../signup.php?signup=success");
+                    session_start();
+                    $_SESSION['uid'] = $uid;
+                    $_SESSION['admin'] = 0;
+                    $_SESSION['fname'] = $fname;
+                    $_SESSION['uname'] = $username;
+
+                    header("Location: ../home.php?signup=success");
                     exit();
                 }
             }

@@ -9,7 +9,7 @@ h3{
 p{
     color: grey;
 }
-img{
+.gallery-container  img{
     max-width: 220px;
     height: 220px;
     margin-top: 10px;

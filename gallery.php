@@ -3,9 +3,17 @@ require 'includes/header.php'
 ?>
 
 <main>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: #4c4c4c;
+        }
+    </style>
+    
     <link rel="stylesheet" href="css/gallery.css">
 
-    <h1>Gallery</h1>
+    <h1 style="color: white">Gallery</h1>
     <div class="gallery-container">
         <?php 
         include_once 'includes/dbhandler.php';
