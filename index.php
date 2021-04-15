@@ -5,10 +5,10 @@ require 'includes/header.php';
     <link rel= "stylesheet" href= "css/about.css">
 
     <div class="about">
-        <h1>About us</h1>
-        <p>We are wholesome and love crochet</p>
-    <div>
-    <div class="row">
+        <h1 style="text-align: center; color: white;">About Us</h1>
+        <p style="text-align: center; color: white;">Priti Creations is a small hand-made crochet boutique. Our aim is to serve the finest quality scarfs, blankets, and more. Founded by a loving mother of 3, Priti is here to fill each home with the kindness and love she gave her boys.</p>
+    </div>
+    <div class="row" style="justify-content: center;">
         <div class="column">
             <div class="card">
                 <img src="images/first.jpeg">
