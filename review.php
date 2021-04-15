@@ -6,7 +6,31 @@ require 'includes/review-helper.php';
 
 <main>
     <span id="testAvg"></span>
-    
+    <div class="container" align="center" style="max-width: 800px;">
+        <div class="my-auto">
+            <label class="text" style="width: 100%; font-weight: bold;">Give your own rating below!</label>
+            <form id="review-form" action="includes/review-helper.php" method="post">
+                <div class="container">
+                    <i class="fa fa-star fa-2x star-rev" data-index="1" style="margin-top: 10px;"></i>
+                    <i class="fa fa-star fa-2x star-rev" data-index="2"></i>
+                    <i class="fa fa-star fa-2x star-rev" data-index="3"></i>
+                    <i class="fa fa-star fa-2x star-rev" data-index="4"></i>
+                    <i class="fa fa-star fa-2x star-rev" data-index="5"></i>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label class="text" name="review-title" id="review-title" style="width: 100%; font-weight: bold;">Title Your Review</label>
+                    <input type="text" name="review-title" id="review-title" placeholder="Please title your review.." style="width: 100%; margin-bottom: 10px;">
+                    <textarea name="review" id="review-text" cols="50" rows="3" placeholder="Please let us know what you thought of this creation..."></textarea>
+
+                    <input type="hidden" name="rating" id="rating">
+                    <input type="hidden" name="item_id" value="<?php echo $_GET['id'];?>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-danger" type="submit" id="review-submit" name="review-submit" style="width: 100%;">Publish Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <span id="review_list"></span>
 </main>
 
@@ -19,7 +43,7 @@ $(document).ready(function() {
     reset_star();
 
     // get reviews
-    xhr_getter('display-reviews.php?id=', "review_list");
+    xhr_getter('includes/display-reviews.php?id=', "review_list");
     //avg();
     xhr_getter('includes/get-ratings.php?id=', "testAvg");
 
